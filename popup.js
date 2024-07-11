@@ -10,7 +10,7 @@ button.textContent = "Enter"
 document.body.appendChild(button)
 
 let succ = document.createElement("div")
-succ.textContent = "copy succ"
+succ.textContent = "copy success"
 succ.hidden = true
 document.body.appendChild(succ)
 
