@@ -1,0 +1,21 @@
+
+{
+  "name": "Password Hash",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["contextMenus", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["out/contentScript.js"]
+    }
+  ],
+  "commands": {
+    "hash-password": {
+      "description": "Convert your password into a hash"
+    }
+  }
+}
