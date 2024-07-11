@@ -2,6 +2,6 @@
 let md5 = require('js-md5')
 
 export function convert(text) {
-  let hash = md5(text)
+  let hash = md5.base64(text)
   return "Aa0=" + hash.substr(0, 8)
 }
