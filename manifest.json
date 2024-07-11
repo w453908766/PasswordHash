@@ -17,5 +17,9 @@
     "hash-password": {
       "description": "Convert your password into a hash"
     }
+  },
+	"action": {
+		"default_title": "Password Hash",
+		"default_popup": "popup.html"
   }
 }

@@ -1,10 +1,5 @@
 
-let md5 = require('js-md5');
-
-function convert(text) {
-  let hash = md5(text)
-  return "Aa0=" + hash.substr(0, 8)
-}
+let {convert} = require('./hash')
 
 function forInput(element) {
   element.value = convert(element.value)
@@ -21,7 +16,7 @@ function forTextBox(element) {
   if (element) {
     if (element.tagName === 'INPUT') {
       let type = ["text", "search", "password"]
-      if(type.indexOf(element.type)) forInput(element)
+      if(type.indexOf(element.type) != -1) forInput(element)
     } else if (element.tagName === 'TEXTAREA') {
       forInput(element)
     } else if (element.contentEditable === "true") {

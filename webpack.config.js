@@ -1,11 +1,11 @@
-const path = require("path");
 
+const path = require("path");
 
 module.exports = {
   mode: 'production',
   target: 'web',
   devtool: "source-map",
-  entry: "./contentScript.js",
+  entry: {"contentScript":"./contentScript.js", "popup": "./popup.js"},
   module: {
     rules: [{
       test: /\.(js|mjs|jsx|ts|tsx)$/,
@@ -21,7 +21,7 @@ module.exports = {
     extensions: [".tsx", ".jsx", ".ts", ".js"],
   },
   output: {
-    filename: "contentScript.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "out"),
   },
   watchOptions: {
