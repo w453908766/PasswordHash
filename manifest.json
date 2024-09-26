@@ -15,7 +15,10 @@
   ],
   "commands": {
     "hash-password": {
-      "description": "Convert your password into a hash"
+      "description": "Convert your password into a hash",
+      "suggested_key": {
+        "default": "Alt+H"
+      }
     }
   },
 	"action": {
