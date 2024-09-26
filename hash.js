@@ -10,5 +10,5 @@ export function convert(text) {
   let num = "0".charCodeAt(0) + arr[14] % 10
   let sym = arr[15] % 2 ? '/' : '+'
 
-  return String.fromCharCode(A, a, num) + sym + hash.substr(0, 8)
+  return String.fromCharCode(A, a, num) + sym + hash.substr(0, 12)
 }
