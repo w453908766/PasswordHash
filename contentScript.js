@@ -26,5 +26,10 @@ function forTextBox(element) {
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  forTextBox(document.activeElement)
+  if(message.kind === "convert"){
+    forTextBox(document.activeElement)
+  } else if(message.kind === "clear") {
+    console.log("clear success")
+    window.navigator.clipboard.writeText("")
+  }
 })

@@ -10,7 +10,7 @@ button.textContent = "Enter"
 document.body.appendChild(button)
 
 let succ = document.createElement("div")
-succ.textContent = "copy success"
+succ.textContent = "copy success, please paste within 30 seconds"
 succ.hidden = true
 document.body.appendChild(succ)
 
@@ -18,13 +18,14 @@ async function writeClipboard(text){
   let password = convert(text)
   await window.navigator.clipboard.writeText(password)
   succ.hidden = false
+  chrome.runtime.sendMessage({ kind: "clear" }, () => {});
 }
 
 button.onclick = () => {
   writeClipboard(pass.value)
 }
 
-pass.onkeypress = (e) => {
+pass.onkeyup = (e) => {
   if(e.key === "Enter"){
     writeClipboard(pass.value)
   } else {
