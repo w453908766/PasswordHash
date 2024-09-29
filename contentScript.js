@@ -1,14 +1,14 @@
 
 let {convert} = require('./hash')
 
-function forInput(element) {
-  element.value = convert(element.value)
+async function forInput(element) {
+  element.value = await convert(element.value)
   element.dispatchEvent(new Event('input'))
   element.dispatchEvent(new Event('change'));
 }
 
-function forEditable(element) {
-  element.textContent = convert(element.textContent) 
+async function forEditable(element) {
+  element.textContent = await convert(element.textContent)
   element.dispatchEvent(new Event('input'))
 }
 

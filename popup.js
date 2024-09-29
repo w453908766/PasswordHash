@@ -15,7 +15,7 @@ succ.hidden = true
 document.body.appendChild(succ)
 
 async function writeClipboard(text){
-  let password = convert(text)
+  let password = await convert(text)
   await window.navigator.clipboard.writeText(password)
   succ.hidden = false
   chrome.runtime.sendMessage({ kind: "clear" }, () => {});
