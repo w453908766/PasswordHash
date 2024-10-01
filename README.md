@@ -8,6 +8,6 @@
 
 # 使用
   输入密码时，输入 “网站域名+口令”，如 “githubxxx”, 按 Alt + H 或右键菜单选择 "Convert your password into a hash"，
-  passwordHahs 会把密码转换成哈希码
+  passwordHash 会把密码转换成哈希码
 
   如果页面的密码输入框不可转换，可以点击右上角图标，输入后会把哈希码复制到剪切板，并在30秒后清除
