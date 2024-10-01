@@ -35,6 +35,7 @@ function clear(){
   var successful = document.execCommand('copy')
   var msg = successful ? 'success' : 'fail';
   console.log('clear ' + msg);
+  textArea.remove()
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {

@@ -23,6 +23,6 @@
   },
 	"action": {
 		"default_title": "Password Hash",
-		"default_popup": "popup.html"
+		"default_popup": "index.html"
   }
 }
